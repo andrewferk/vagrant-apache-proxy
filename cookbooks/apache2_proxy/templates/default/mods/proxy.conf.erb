@@ -1,0 +1,19 @@
+<IfModule mod_proxy.c>
+
+	ProxyRequests Off
+	ProxyVia On
+
+	<Proxy *>
+		AddDefaultCharset off
+		Order deny,allow
+		Deny from all
+		#Allow from .example.com
+	</Proxy>
+
+	ProxyPass /dance/ http://www.allegrodancemusic.com/
+	ProxyPassReverse /dance/ http://www.allegrodancemusic.com/
+	<Proxy http://www.allegrodancemusic.com/>
+		Order Allow,Deny
+		Allow from all
+	</Proxy>
+</IfModule>

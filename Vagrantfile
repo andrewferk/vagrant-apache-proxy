@@ -13,5 +13,9 @@ Vagrant::Config.run do |config|
     chef.add_recipe "git"
     chef.add_recipe "vim"
     chef.add_recipe "apache2"
+    chef.add_recipe "apache2_proxy"
+    chef.add_recipe "apache2::mod_proxy_http"
+    chef.add_recipe "apache2::mod_headers"
+    chef.add_recipe "apache2::mod_deflate"
   end
 end
