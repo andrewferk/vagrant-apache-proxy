@@ -7,12 +7,11 @@
 		AddDefaultCharset off
 		Order deny,allow
 		Deny from all
-		#Allow from .example.com
 	</Proxy>
 
-	ProxyPass /dance/ http://www.allegrodancemusic.com/
-	ProxyPassReverse /dance/ http://www.allegrodancemusic.com/
-	<Proxy http://www.allegrodancemusic.com/>
+	ProxyPass /ad/ http://www.ackmanndickenson.com/
+	ProxyPassReverse /ad/ http://www.ackmanndickenson.com/
+	<Proxy http://www.ackmanndickenson.com/
 		Order Allow,Deny
 		Allow from all
 	</Proxy>
